@@ -9,7 +9,6 @@ abstract class Book(
     var availableCopies: Int = availableCopies
         set(value) {
             if (value < 0) return
-            if (value == 0) println("Warning: Book is now out of stock!")
             field = value
         }
 

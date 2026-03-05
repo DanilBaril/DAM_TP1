@@ -28,6 +28,9 @@ class Library(val name: String) {
         }
         book.availableCopies--
         println("Successfully borrowed '$title'. Copies remaining: ${book.availableCopies}")
+        if (book.availableCopies == 0) {
+            println("Warning: Book is now out of stock!")
+        }
     }
 
     fun returnBook(title: String) {
