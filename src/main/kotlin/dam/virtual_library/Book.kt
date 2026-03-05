@@ -1,6 +1,6 @@
 package org.example.dam.virtual_library
 
-open class Book(
+abstract class Book(
     val title: String,
     val author: String,
     private val _publicationYear: Int,
@@ -23,4 +23,10 @@ open class Book(
     init {
         println("Book '${title}' by ${author} has been added to the library.")
     }
+
+    override fun toString(): String {
+        return "Title: $title, Author: $author, Era: $publicationYear, Available: $availableCopies copies"
+    }
+
+    abstract fun getStorageInfo(): String
 }

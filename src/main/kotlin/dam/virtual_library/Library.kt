@@ -49,5 +49,5 @@ class Library(val name: String) {
             println("- ${book.title} (${book.publicationYear}, ${book.availableCopies} copy available)")
         }
     }
-    
+
 }
