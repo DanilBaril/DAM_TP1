@@ -3,8 +3,17 @@ package org.example.dam.virtual_library
 class Library(val name: String) {
     private val books = mutableListOf<Book>()
 
+    companion object {
+        private var totalBooksCreated = 0
+
+        fun getTotalBooksCreated(): Int {
+            return totalBooksCreated
+        }
+    }
+
     fun addBook(book: Book) {
         books.add(book)
+        totalBooksCreated++
     }
 
     fun borrowBook(title: String) {
