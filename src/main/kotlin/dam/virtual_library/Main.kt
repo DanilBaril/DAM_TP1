@@ -49,4 +49,10 @@ fun main() {
     library.searchByAuthor("George Orwell")
 
     println("\nTotal books created: ${Library.getTotalBooksCreated()}")
+
+    val member = LibraryMember("Benjamin Salgado", "M001")
+    member.borrowedBooks.add("Clean Code")
+    member.borrowedBooks.add("1984")
+    println("\n--- Library Member ---")
+    println("Name: ${member.name}, ID: ${member.membershipId}, Borrowed: ${member.borrowedBooks}")
 }
